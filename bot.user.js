@@ -185,21 +185,21 @@ console.log("Running Apos Bot!");
     }
 
     function isFood(blob, cell) {
-        if (!cell.isVirus() && compareSize(cell, blob, 1.30) || (cell.size <= 11)) {
+        if (!cell.isVirus() && compareSize(cell, blob, 10) || (cell.size <= 11)) {
             return true;
         }
         return false;
     }
 
     function isThreat(blob, cell) {
-        if (!cell.isVirus() && compareSize(blob, cell, 1.30)) {
+        if (!cell.isVirus() && compareSize(blob, cell, 10)) {
             return true;
         }
         return false;
     }
 
     function isVirus(blob, cell) {
-        if (cell.isVirus() && compareSize(cell, blob, 1.30)) {
+        if (cell.isVirus() && compareSize(cell, blob, 10)) {
             return true;
         } else if (cell.isVirus() && cell.color.substring(3,5).toLowerCase() != "ff") {
             return true;
@@ -215,7 +215,7 @@ console.log("Running Apos Bot!");
     }
 
     function getMass(blob){
-        setShowMass(true);
+        setShowMass(false);
         //This var is only declared while showMass=true.
         return blob.O.F;
     }
