@@ -14,7 +14,8 @@ var aposBotVersion = 3.551;
 //      Split to catch smaller targets
 //      Angle based cluster code
 //      Better wall code
-//      In team mode, make allies be obstacles.
+//      In team mode, make allies be obstacles
+//      Starting mass with 100.
 
 Number.prototype.mod = function(n) {
     return ((this % n) + n) % n;
